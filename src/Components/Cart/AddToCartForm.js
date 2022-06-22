@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createRef, useState } from 'react';
 import classes from './AddToCartForm.module.css'
+import Button from '../UI/Button'
+import NumericInputWithIncrement from '../UI/NumericInputWithIncrement'
 
 const AddToCartForm = props => {
     const [itemCount, setItemCount] = useState(1)
@@ -14,7 +16,6 @@ const AddToCartForm = props => {
     }  
 
     const inputHandler = (event) => {
-        event.preventDefault()
         const val = +event.target.value
         if (Number.isInteger(val) && val > 0) {
             setItemCount(val)
@@ -22,25 +23,20 @@ const AddToCartForm = props => {
     }
 
     const submitHandler = (event) => {
-        event.preventDefault()
         setItemCount(1)
         props.onAdd(itemCount)
     }
 
     return (
         <form>
-            <span className={classes['btn-group']}>
-                <button type="button" className={classes['button']} onClick={substractCountHandler}>-</button>
-                <input className={classes['input']} value={itemCount} onChange={inputHandler} />
-                <button type="button" className={classes['button']} onClick={addCountHandler}>+</button>
-            </span>
+            <NumericInputWithIncrement onSubstract={substractCountHandler} onAdd={addCountHandler} onChange={inputHandler} value={itemCount}/>
             <div>
-                <button type="submit" className={classes.submit} onClick={submitHandler}>
+                <Button type="submit" className={classes.submit} onClick={submitHandler}>
                     <span>Add to cart</span>
                     <span className={classes.icon}>
                         <FontAwesomeIcon icon="shopping-cart" />
                     </span>
-                </button>
+                </Button>
             </div>
         </form>
     );

@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import styles from './Header.module.css'
-import bannerImage from '../img/kitten-banner.jpg'
+import bannerImage from '../../img/kitten-banner.jpg'
 import HeaderCartButton from './HeaderCartButton'
 
 const Header = function(props) {

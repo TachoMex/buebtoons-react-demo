@@ -1,5 +1,5 @@
 import classes from './Webtoon.module.css'
-import AddToCartForm from './AddToCartForm'
+import AddToCartForm from './Cart/AddToCartForm'
 
 const WebToon = props => {
 

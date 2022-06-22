@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useContext } from 'react'
 import classes from './CartEntry.module.css'
-import CartContext from './Controllers/CartContext'
+import CartContext from '../Controllers/CartContext'
+import NumericInputWithIncrement from '../UI/NumericInputWithIncrement'
+import Button from '../UI/Button'
 const CartEntry = props => {
     const cartContext = useContext(CartContext);
 
@@ -20,30 +22,18 @@ const CartEntry = props => {
 
     return (
         <li className={classes.li}>
-            <span>
+            <div>
                 {props.name}
-            </span>
+            </div>
 
-            <button className={classes.button} onClick={removeItemHandler}>
-                <span>
-                    <FontAwesomeIcon icon="minus" />
-                </span>
-            </button>
+            <NumericInputWithIncrement onSubstract={removeItemHandler} onAdd={addItemHandler} value={props.count}/>
 
-            <span>{props.count}</span>
-
-            <button className={classes.button} onClick={addItemHandler}>
-                <span>
-                    <FontAwesomeIcon icon="plus" />
-                </span>
-            </button>
-
-            <button className={classes.button} onClick={clearItemHandler}>
+            <Button onClick={clearItemHandler}>
                 Remove
                 <span>
                     <FontAwesomeIcon icon="trash" />
                 </span>
-            </button>
+            </Button>
         </li>
     )
 }

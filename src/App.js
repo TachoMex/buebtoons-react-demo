@@ -2,10 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 
-import Header from './Components/Header'
+import Header from './Components/Header/Header'
 import Menu from './Components/Menu'
 import CartController from './Components/Controllers/CartController';
-import CartModal from './Components/CartModal';
+import CartModal from './Components/Cart/CartModal';
 
 function App() {
   const [showCart, setShowCart] = useState(false)

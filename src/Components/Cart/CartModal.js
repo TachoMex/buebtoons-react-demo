@@ -1,6 +1,7 @@
 import { useContext } from 'react'
-import CartContext from './Controllers/CartContext'
-import Modal from './UI/Modal'
+import CartContext from '../Controllers/CartContext'
+import Modal from '../UI/Modal'
+import Button from '../UI/Button'
 import CartEntry from './CartEntry'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classes from './CartModal.module.css'
@@ -21,12 +22,12 @@ const CartModal = (props) => {
             <ul className={classes.ul}>
                 { cartElements }
             </ul>
-            <button className={classes.button} onClick={clearCart}> 
+            <Button onClick={clearCart}> 
                 Clear Cart
                 <span>
                     <FontAwesomeIcon icon="trash" />
                 </span>
-            </button>
+            </Button>
         </Modal>
     )
 }
