@@ -1,0 +1,28 @@
+.li {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    background-color: purple;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+}
+
+.button {
+    color: purple;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: white;
+    color: purple;
+    padding: 4px 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    float: left;
+    border-radius: 10%;
+}

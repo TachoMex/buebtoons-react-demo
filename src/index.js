@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import fontawesome from '@fortawesome/fontawesome'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faPlus, faMinus, faTrash } from '@fortawesome/fontawesome-free-solid'
+
+fontawesome.library.add(faShoppingCart, faPlus, faMinus, faTrash);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
