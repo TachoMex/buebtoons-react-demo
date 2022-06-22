@@ -3,8 +3,8 @@
     justify-content: space-between;
     margin: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
-    background-color: purple;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
     border-radius: 10px;
     padding: 15px;
 }
@@ -12,16 +12,16 @@
 .status {
     font-style: italic;
     font-size: small;
-    color: white;
+    color: var(--theme-background);
 }
 
 .title {
     margin: 0 0 0.25rem 0;
-    color: white;
+    color: var(--theme-background);
 }
 
 .summary {
     font-style: italic;
-    color: white;
+    color: var(--theme-background);
 }
 

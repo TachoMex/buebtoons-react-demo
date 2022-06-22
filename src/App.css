@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --primary-color: purple;
+  --secondary-color: greenyellow;
+  --theme-background: white; 
+  --hover-color: rgb(241, 102, 241);
+  --box-shadow: rgba(0, 0, 0, 0.25);
+  --button-active: black;
+
+  --altern-button-hover: green;
+  --cart-badge-color: pink;
+  --altern-button-active: black;
+}
+
+.body {
+  background-color: var(--theme-background);
+}

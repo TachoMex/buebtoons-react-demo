@@ -4,13 +4,13 @@
   left: 0;
   width: 96%;
   height: 5rem;
-  background-color: rgb(84, 27, 138);
-  color: #00ee00;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 8px var(--box-shadow);
   z-index: 10;
 }
 

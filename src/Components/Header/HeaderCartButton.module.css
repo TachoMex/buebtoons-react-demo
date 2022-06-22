@@ -2,8 +2,8 @@
     cursor: pointer;
     font: inherit;
     border: none;
-    background-color: #0e0;
-    color: purple;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 0.75rem 3rem;
     display: flex;
     justify-content: space-around;
@@ -13,18 +13,18 @@
 }
 
 .badge {
-    background-color: purple;
+    background-color: var(--primary-color);
     padding: 0.25rem;
     border-radius: 25px;
     margin-left: 1rem;
     font-weight: bold;
-    color: rgb(241, 102, 241);
+    color: var(--hover-color);
 }
 
 .button:hover {
-    background-color: green;
+    background-color: var(--altern-button-hover);
 }
 
 .button:active {
-    background-color: black;
+    background-color: var(--altern-button-active);
 }

@@ -9,8 +9,8 @@
     cursor: pointer;
     font: inherit;
     border: none;
-    background-color: white;
-    color: purple;
+    background-color: var(--theme-background);
+    color: var(--primary-color);
     padding: 4px 4px;
     display: flex;
     justify-content: space-around;
@@ -28,8 +28,8 @@
 .btn-group input{
     display: inline-block;
     border: none;
-    background-color: white;
-    color: purple;
+    background-color: var(--theme-background);
+    color: var(--primary-color);
     padding: 4px 4px;
     display: flex;
     justify-content: space-around;
@@ -49,9 +49,9 @@
 }
 
 .btn-group button:hover {
-    background-color: pink;
+    background-color: var(--hover-color);
 }
 
 .btn-group button:active {
-    background-color: black;
+    background-color: var(--button-active);
 }

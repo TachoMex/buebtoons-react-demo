@@ -1,15 +1,15 @@
 .badge {
-    background-color: purple;
+    background-color: var(--primary-color);
     padding: 0.25rem;
     border-radius: 25px;
     margin-left: 1rem;
     font-weight: bold;
-    color: rgb(241, 102, 241);
+    color: var(--cart-badge-color);
 }
 
 .submit {
-    background-color: white;
-    color: purple;
+    background-color: var(--theme-background);
+    color: var(--primary-color);
     font-weight: bold;
     border: none;
     width: 100%;
@@ -17,5 +17,9 @@
 }
 
 .submit:hover {
-    background-color: pink;
+    background-color: var(--hover-color);
+}
+
+.submit:active {
+    background-color: var(--active-color);
 }
