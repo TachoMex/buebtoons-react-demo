@@ -12,7 +12,7 @@ const CartController = (props) => {
     const [cartState, setCartState] = useState(defaultCartContext())
 
     const addItem = (item) => {
-        setCartState((prevState) => { 
+        setCartState((prevState) => {
             const items = { ...prevState.items }
             if (items[item.id]) {
                 return {items: {...items, [item.id]: {...item, count: item.count + items[item.id].count}}, totalAmount: prevState.totalAmount + item.count }
@@ -21,21 +21,21 @@ const CartController = (props) => {
             }
         })
     }
-    
+
     const removeItem = (id, count) => {
-        setCartState((prevState) => { 
+        setCartState((prevState) => {
             const items = { ...prevState.items }
-            
+
             if (items[id].count <= count) {
                 const {[id]: _, ...resultItems} = items
                 return {
-                    items: resultItems, totalAmount: prevState.totalAmount - items[id].count 
+                    items: resultItems, totalAmount: prevState.totalAmount - items[id].count
                 }
             } else {
                 return {items: {...items, [id]: {...items[id], count: items[id].count - count}}, totalAmount: prevState.totalAmount - count }
             }
-        })        
-    } 
+        })
+    }
 
     const clearItem = (id) => {
         removeItem(id, cartState.items[id].count)
@@ -46,11 +46,11 @@ const CartController = (props) => {
     }
 
     const cartContext = {
-        collection: cartState,         
+        collection: cartState,
         addItem: addItem,
         removeItem: removeItem,
         clearItem: clearItem,
-        clearCart: clearCart 
+        clearCart: clearCart
     }
 
     return (

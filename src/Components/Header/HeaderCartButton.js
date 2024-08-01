@@ -5,7 +5,6 @@ import { useContext } from 'react'
 
 const HeaderCartButton = (props) => {
     const cartContext = useContext(CartContext)
-    console.log(cartContext)
     return (
         <button className={styles.button} onClick={props.onShow}>
             <span className={styles.icon}>
